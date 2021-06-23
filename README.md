@@ -5,7 +5,7 @@ It has these objects:
   - Tests
     - Question
     - Answer
-  - Admin
   - User
+  - Category
 
 Thanks!
