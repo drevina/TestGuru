@@ -7,6 +7,9 @@ class User < ApplicationRecord
   validates :name, presence: true
   
   #scope-method instead of model-method -->
-  scope :user_tests_by_level, -> (level) { where(level: level).joins(:tests_user).where(tests_users: {user_id: id}) }
+  scope :sort_by_level, -> (level) { where(level: level)
 
+  def user_tests_by_level(level)
+    tests.sort_by_level(level)
+  end
 end
