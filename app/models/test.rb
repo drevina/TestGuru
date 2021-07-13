@@ -14,12 +14,13 @@ class Test < ApplicationRecord
   scope :easy, -> { where(level: 0..1) }
   scope :normal, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }
-  scope :sort_by_category, -> (category) { joins(:category).where(categories.title: category)
+  scope :sort_by_category, -> (category) { joins(:category).where('categories.title = :category', category: category) }
 
 
   def self.sort_tests_by_category(category)
-    Test.sort_by_category(category)
-        .order(tests.title: :desc)
-        .pluck(:tests.title)
+    Test
+        .sort_by_category(category)
+        .order(title: :desc)
+        .pluck(:title)
   end
 end
