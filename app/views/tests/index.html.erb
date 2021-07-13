@@ -1,0 +1,15 @@
+<h1>Tests list</h1>
+
+<p> <%= link_to 'Create new test', '/tests/new' %>
+</p>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Level</th>
+    <th>Q-ty of questions</th>
+    <th colspan="3">Actions</th>
+  </tr>
+
+  <% render @tests %>
+</table>
