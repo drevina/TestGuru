@@ -1,18 +1,26 @@
 Rails.application.routes.draw do
 
-resources :tests do
-  resources :questions, shallow: true, except: :index do
-    resources :answers, shallow: true, except: :index
+  get 'users/new'
+  get :signup, to: 'users#new'
+
+  root 'tests#index'
+
+  resources :users, only: :create 
+
+  resources :tests do
+    resources :questions, shallow: true, except: :index do
+      resources :answers, shallow: true, except: :index
+    end
+
+    member do
+      post :start
+    end
   end
 
-  member do
-    post :start
+  resources :test_passages, only: %i[ show update ] do
+    member do
+      get :result
+    end
   end
-end
 
-resources :test_passages, only: %i[ show update ] do
-  member do
-    get :result
-  end
-end
 end
