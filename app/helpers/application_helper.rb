@@ -8,4 +8,10 @@ module ApplicationHelper
     Date.today.year
   end
 
+  def flash_helper(type)
+    if flash[type]
+      content_tag :p, flash[type], class:'flash alert'
+    end
+  end
+
 end
