@@ -1,12 +1,12 @@
 class TestsController < ApplicationController
 
-  before_action :authenticate_user!
   before_action :find_test, only: %i[ show edit update destroy start]
-  before_action :find_tests, only: %i[ index ]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
-  def index; end
+  def index
+    @tests = Test.all
+  end
 
   def show; end
 
@@ -48,10 +48,6 @@ private
 
   def find_test
     @test = Test.find(params[:id])
-  end
-
-  def find_tests
-    @tests = Test.all
   end
 
   def test_params
