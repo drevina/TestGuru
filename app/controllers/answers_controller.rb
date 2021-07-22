@@ -1,4 +1,5 @@
 class AnswersController < ApplicationController
+
   before_action :find_answer, only: %i[ show edit update destroy ]
   before_action :find_question, only: %i[ new create ]
 
@@ -11,7 +12,7 @@ class AnswersController < ApplicationController
   def edit; end
 
   def create
-    @answer = Answer.new(answer_params)
+    @answer = @question.answers.new(answer_params)
 
     if @answer.save
       redirect_to @answer
@@ -46,4 +47,5 @@ class AnswersController < ApplicationController
     def answer_params
       params.require(:answer).permit(:title, :correct)
     end
+    
 end

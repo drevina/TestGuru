@@ -1,4 +1,5 @@
 class Test < ApplicationRecord
+  
   belongs_to :category
   has_many :questions
   has_many :test_passages
@@ -23,4 +24,5 @@ class Test < ApplicationRecord
         .order(title: :desc)
         .pluck(:title)
   end
+  
 end

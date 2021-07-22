@@ -1,9 +1,12 @@
 class TestPassage < ApplicationRecord
+  
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_question
+
+  PASSING_RESULT = 85.freeze
 
 def accept!(answer_ids)
   self.correct_questions += 1 if correct_answer?(answer_ids)
@@ -16,7 +19,7 @@ def total_result
 end
 
 def done?
-  total_result > 85
+  total_result >= PASSING_RESULT
 end
 
 def completed?
