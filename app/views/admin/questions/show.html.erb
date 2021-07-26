@@ -7,7 +7,7 @@
 <%= link_to 'New answer', new_question_answer_path(@question) %>
 
 <ol>
-  <%= render @question.answers %>
+  <%= render partial: 'answers/answer', collection: @question.answers %>
 </ol>
 
 <%= link_to 'Edit question', edit_admin_question_path(@question) %> |
