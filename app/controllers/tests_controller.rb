@@ -21,6 +21,6 @@ private
   end
 
   def rescue_with_test_not_found
-    render plain: "Can't found this test"
+    render plain: t('.render')
   end
 end
