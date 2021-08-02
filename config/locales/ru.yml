@@ -23,6 +23,11 @@ ru:
         email: "Почта"
         password: "Пароль"
         remember_me: "Запомнить меня"
+        first_name: "Имя"
+        last_name: "Фамилия"
+        password_confirmation: "Подтверждение пароля"
+    select:
+      prompt: "Выберите"
 
     links:
       show: "Просмотр"
@@ -71,7 +76,11 @@ ru:
         render: "Тест не найден"
       edit:
         header: "Редактирование %{title} теста"
-      new: "Создание нового теста" 
+      new: "Создание нового теста"
+
+  concerns:
+    application:
+      hello: "Привет, %{user}!"
 
   shared:
     errors:
@@ -86,13 +95,13 @@ ru:
       courses: "Приложение ТестГуру создано по заданию и при поддержке курсов "
     header:
       welcome: "Добро пожаловать, "
-      guru: "Гуру!"
+      guru: " Гуру!"
       stranger: "Добро пожаловать, незнакомец"
-      header: " ТестГуру"
+      header: "ТестГуру"
 
   tests_mailer:
     completed_test:
-      subject: "Вы успешно завершили тест на TestGuru!"
+      subject: "Вы успешно завершили тест на ТестГуру!"
 
   layouts:
     admin:

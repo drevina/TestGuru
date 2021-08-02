@@ -6,13 +6,12 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def after_sign_in_path_for(user)
-    flash[:notice] = "Hello, #{user.full_name}!"
+    flash[:notice] = t('concerns.application.hello', user: user.full_name)
     user.admin? ? admin_tests_path : root_path
   end
   
-
   def default_url_options
-    { lang: I18n.locale }
+    { lang: ((I18n.locale == I18n.default_locale) ? nil : I18n.locale) }
   end
 
   private

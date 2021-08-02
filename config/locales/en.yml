@@ -23,6 +23,11 @@ en:
         email: "Email"
         password: "Password"
         remember_me: "Remember me"
+        first_name: "First name"
+        last_name: "Last name"
+        password_confirmation: "Password confirmation"
+    select:
+      prompt: "Please select"
 
     links:
       show: "Show"
@@ -73,6 +78,10 @@ en:
         header: "Edit %{title} test"
       new: "Creating new test"
 
+  concerns:
+    application:
+      hello: "Hello, %{user}!"
+
   shared:
     errors:
       header: 
@@ -84,7 +93,7 @@ en:
       courses: "TestGuru application is made by order and with the support of "
     header:
       welcome: "Welcome, "
-      guru: "Guru!"
+      guru: " Guru!"
       stranger: "Welcome, stranger"
       header: "TestGuru"
 
