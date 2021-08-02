@@ -11,6 +11,15 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+        user_id: "Пользователь"
+    links:
+      show: "Просмотр"
+      edit: "Редактировать"
+      delete: "Удалить"
+      back: "Назад"
+      create_test: "Новый тест"
+      create_question: "Новый вопрос"
+      tests_list: "К списку всех тестов"
 
   test_passages:
     result:
@@ -19,13 +28,32 @@ ru:
   tests:
     index:
       header: "Список тестов"
+      title: "Название"
+      level: "Уровень"
+      questions: "Вопросы"
+      actions: "Действия"
+    test: 
+      start: "Старт"
+    rescue_with_test_not_found: 
+      render: "Тест не найден"
 
   admin:
     tests:
       create:
         success: "Тест был успешно создан!"
       index:
-        header: "Список тестов"      
+        header: "Список тестов"
+      rescue_with_test_not_found: 
+        render: "Тест не найден"
+      edit:
+        header: "Редактирование %{title} теста"
+      new: "Создание нового теста"
+
+    nav:
+      panel: "Панель администратора TestGuru"
+      welcome: "Добро пожаловать,"
+      guru: "Гуру!"
+      logout: "Выйти"      
 
   shared:
     errors:
