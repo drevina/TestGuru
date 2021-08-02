@@ -6,12 +6,24 @@ ru:
       test:
         create: "Создать тест"
         update: "Обновить тест"
+      question:
+        next: "Дальше"
+      sessions:
+        enter: "Войти"
+      devise:
+        registrations:
+          become: "Стать Гуру!"
     label:
       test:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
         user_id: "Пользователь"
+      user:
+        email: "Почта"
+        password: "Пароль"
+        remember_me: "Запомнить меня"
+
     links:
       show: "Просмотр"
       edit: "Редактировать"
@@ -20,10 +32,22 @@ ru:
       create_test: "Новый тест"
       create_question: "Новый вопрос"
       tests_list: "К списку всех тестов"
+      logout: "Выйти"
+      login: "Войти"
+      new: "Новый Гуру"
+      forgot_pswrd: "Забыли пароль?"
+      instructions_conf: "Не получили инструкций для подтверждения?"
+      instrustions_unlock: "Не получили инструкция для восстановления?"   
 
   test_passages:
     result:
       header: "Тест %{title} успешно завершён!"
+      score: "Ваш результат:"
+      done: "Поздравляем! Вы прошли тест!"
+      fail: "К сожалению, Вы не прошли тест, слишком плохой результат :-("
+    show:
+      header: "Прохождение %{title} теста"
+      question: "Вопрос"
 
   tests:
     index:
@@ -47,13 +71,7 @@ ru:
         render: "Тест не найден"
       edit:
         header: "Редактирование %{title} теста"
-      new: "Создание нового теста"
-
-    nav:
-      panel: "Панель администратора TestGuru"
-      welcome: "Добро пожаловать,"
-      guru: "Гуру!"
-      logout: "Выйти"      
+      new: "Создание нового теста" 
 
   shared:
     errors:
@@ -62,7 +80,32 @@ ru:
         other: "Обнаружено %{count} ошибки(-ок)"
         few: "Обнаружено %{count} ошибки"
         many: "Обнаружено %{count} ошибок"
+    footer:
+      intro: "Это приложение создано для прохождения тестов. Вы сможете проходить тесты, редактировать, создавать, получать результаты и конечно делиться своими результатами в соцсетях!"
+      author: "Автор: Александра Древина"
+      courses: "Приложение ТестГуру создано по заданию и при поддержке курсов "
+    header:
+      welcome: "Добро пожаловать, "
+      guru: "Гуру!"
+      stranger: "Добро пожаловать, незнакомец"
+      header: " ТестГуру"
 
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
+
+  layouts:
+    admin:
+      header_admin: "Панель администратора | ТестГуру"
+    application: 
+      header: "ТестГуру"
+
+  devise:
+    shared:
+      header: "Войти в ТестГуру"
+    sessions:
+      new:
+        header: "Стать Гуру"
+    registrations:
+      new:
+        header: "Стать Гуру"
