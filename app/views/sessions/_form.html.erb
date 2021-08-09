@@ -1,16 +1,20 @@
-<%= form_with url: sessions_path, local: true do |form| %>
-  <% flash_helper(:alert) %>
+<div class="row">
+  <div class="col col-md=4">
+    <%= form_with url: sessions_path, local: true do |form| %>
+      <% flash_helper(:alert) %>
+      <div class="form-group">
+        <p>
+          <%= form.label :email %>
+          <%= form.text_field :email, id: :email, autofocus: true, class: 'form-control', placeholder: t('sessions.form.email_label') %>
+        </p><br>
 
-  <p>
-    <%= form.label :email %><br>
-    <%= form.text_field :email, id: :email %>
-  </p><br>
+        <p>
+          <%= form.label :password %>
+          <%= form.password_field :password, id: :password, autocomplete: "off", class: 'form-control' %>
+        </p><br>
 
-  <p>
-    <%= form.label :password %><br>
-    <%= form.password_field :password, id: :password %>
-  </p><br>
-
-  <p><%= form.submit t('helpers.submit.sessions.enter') %></p>
-
-<% end %>
+        <p><%= form.submit t('helpers.submit.sessions.enter') %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

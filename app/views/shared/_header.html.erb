@@ -1,15 +1,17 @@
-<div class="header">
+<nav class="navbar navbar-light bg-light">
+  <%= link_to t('.header'), root_path, class: 'navbar-brand' %>
 
-<%= link_to t('.header'), root_path %>
-  <% if user_signed_in? %>
-    <p class="nav">
+  <span class="navbar-text">
+    <% if user_signed_in? %>
+      <p>
       <%=t('.welcome') %><b><%= current_user.full_name %></b><%= t('.guru') %><br>
-    <%= link_to t('helpers.links.tests_list'), tests_path %><br>
-    <%= link_to t('helpers.links.logout'), destroy_user_session_path, method: :delete %> </p>
-  <% else %>
-    <p><b><%= t('.stranger') %></b></p><br>
-    <%= link_to t('helpers.links.login'), new_user_session_path %><br>
-    <%= link_to t('helpers.links.new'), new_user_registration_path %>
-  <% end %>
-
-</div>
+      <%= link_to t('helpers.links.tests_list'), tests_path %><br>
+      <%= link_to t('helpers.links.logout'), destroy_user_session_path, method: :delete %>
+      </p>
+    <% else %>
+      <p><b><%= t('.stranger') %></b></p><br>
+      <%= link_to t('helpers.links.login'), new_user_session_path %><br>
+      <%= link_to t('helpers.links.new'), new_user_registration_path %>
+    <% end %>
+  </span>
+</nav>

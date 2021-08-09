@@ -90,7 +90,10 @@ en:
     footer:
       intro: "This application was created for working with tests. You can create tests and manage them, pass the tests, get your results and of course you can public own results on your personal page on social networks!"
       author: "Author: Aleksandra Drevina"
-      courses: "TestGuru application is made by order and with the support of "
+      courses: "TestGuru application is made by order and with the support of Thinknetica"
+      header-1: "About the app"
+      header-2: "View on Github"
+      header-3: "Thanks"
     header:
       welcome: "Welcome, "
       guru: " Guru!"
@@ -113,7 +116,12 @@ en:
     sessions:
       new:
         header: "Become a Guru"
+        remember: "Remember me"
     registrations:
       new:
         header: "Become a Guru"
+
+  sessions:
+    form:
+      email_label: "Enter email"
 
