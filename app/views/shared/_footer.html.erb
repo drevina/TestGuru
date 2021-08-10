@@ -1,7 +1,17 @@
-<footer>
-  <p><%= t('.intro') %></p><br>
-  <%= github_url('drevina', 'TestGuru') %><br>
-  <%= t('.author') %><br>
-  <%= t('.courses') %><a target="_blank" href="https://thinknetica.com/">Thinknetica</a><br>
-  <p><%= current_year %></p>
-</footer>
+<div class="card text-center mt-5">
+  <div class="card-header">
+    <%= t('.header-1') %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= t('.intro') %></h5>
+    <p class="card-text">
+      <%= github_url('drevina', 'TestGuru') %><br>
+      <%= t('.author') %><br>
+      <%= t('.courses') %><br>
+    </p>
+    <a href="https://thinknetica.com/" target="_blank" class="btn btn-outline-primary">Thinknetica</a>
+  </div>
+  <div class="card-footer text-muted">
+    <p><%= current_year %></p>
+  </div>
+</div>

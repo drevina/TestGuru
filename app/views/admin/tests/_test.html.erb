@@ -2,10 +2,10 @@
   <td><%= test.title %></td>
   <td><%= test.level %></td>
   <td><%= test.questions.count %></td>
-  <td><%= link_to t('helpers.links.show'), admin_test_path(test) %></td>
-  <td><%= link_to t('helpers.links.edit'), edit_admin_test_path(test) %></td>
+  <td><%= link_to t('helpers.links.show'), admin_test_path(test), class: 'btn btn-sm btn-outline-secondary' %></td>
+  <td><%= link_to t('helpers.links.edit'), edit_admin_test_path(test), class: 'btn btn-sm btn-outline-secondary' %></td>
   <td>
-    <%= link_to t('helpers.links.delete'),
+    <%= link_to t('helpers.links.delete'), class: 'btn btn-sm btn-outline-secondary',
       admin_test_path(test),
       method: :delete,
       data: { confirm: 'Are you sure?'} %>
