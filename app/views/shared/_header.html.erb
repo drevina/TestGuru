@@ -1,17 +1,17 @@
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
   <%= link_to t('.header'), root_path, class: 'navbar-brand' %>
 
   <span class="navbar-text">
     <% if user_signed_in? %>
       <p>
       <%=t('.welcome') %><b><%= current_user.full_name %></b><%= t('.guru') %><br>
-      <%= link_to t('helpers.links.tests_list'), tests_path %><br>
-      <%= link_to t('helpers.links.logout'), destroy_user_session_path, method: :delete %>
+      <%= link_to t('helpers.links.tests_list'), tests_path, class: 'btn btn-link' %><br>
+      <%= link_to t('helpers.links.logout'), destroy_user_session_path, method: :delete, class: 'btn btn-sm btn-outline-secondary' %>
       </p>
     <% else %>
       <p><b><%= t('.stranger') %></b></p><br>
-      <%= link_to t('helpers.links.login'), new_user_session_path %><br>
-      <%= link_to t('helpers.links.new'), new_user_registration_path %>
+      <%= link_to t('helpers.links.login'), new_user_session_path, class: 'btn btn-outline-success me-2'  %><br>
+      <%= link_to t('helpers.links.new'), new_user_registration_path, class: 'btn btn-sm btn-outline-secondary' %>
     <% end %>
   </span>
 </nav>

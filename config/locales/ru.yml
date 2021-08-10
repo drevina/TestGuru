@@ -108,7 +108,7 @@ ru:
 
   layouts:
     admin:
-      header_admin: "Панель администратора | ТестГуру"
+      header_admin: " | Панель администратора"
     application: 
       header: "ТестГуру"
 

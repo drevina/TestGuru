@@ -106,7 +106,7 @@ en:
 
   layouts:
     admin:
-      header_admin: "Admin Panel | TestGuru"
+      header_admin: " | Admin Panel"
     application:
       header: "TestGuru"
 
