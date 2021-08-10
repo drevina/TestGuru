@@ -9,9 +9,10 @@
       <%= link_to t('helpers.links.logout'), destroy_user_session_path, method: :delete, class: 'btn btn-sm btn-outline-secondary' %>
       </p>
     <% else %>
-      <p><b><%= t('.stranger') %></b></p><br>
-      <%= link_to t('helpers.links.login'), new_user_session_path, class: 'btn btn-outline-success me-2'  %><br>
-      <%= link_to t('helpers.links.new'), new_user_registration_path, class: 'btn btn-sm btn-outline-secondary' %>
+      <p><b><%= t('.stranger') %></b></p>
+      <%= link_to t('helpers.links.login'), new_user_session_path, class: 'btn btn-outline-success me-2' %><br>
+      <%= link_to t('helpers.links.new'), new_user_registration_path, class: 'btn btn-sm btn-outline-secondary mt-3' %>
     <% end %>
   </span>
 </nav>
+

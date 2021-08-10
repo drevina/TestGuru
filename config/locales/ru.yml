@@ -77,6 +77,8 @@ ru:
       edit:
         header: "Редактирование %{title} теста"
       new: "Создание нового теста"
+    nav:
+      panel: "К панели управления"
 
   concerns:
     application:
@@ -108,7 +110,7 @@ ru:
 
   layouts:
     admin:
-      header_admin: " | Панель администратора"
+      header_admin: "Панель администратора"
     application: 
       header: "ТестГуру"
 

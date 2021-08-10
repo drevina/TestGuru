@@ -77,6 +77,8 @@ en:
       edit:
         header: "Edit %{title} test"
       new: "Creating new test"
+    nav:
+      panel: "To the admin panel"
 
   concerns:
     application:
@@ -106,7 +108,7 @@ en:
 
   layouts:
     admin:
-      header_admin: " | Admin Panel"
+      header_admin: "Admin Panel"
     application:
       header: "TestGuru"
 
