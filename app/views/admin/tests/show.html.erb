@@ -10,12 +10,12 @@
 
 <p>
   <strong><%= t('.questions') %></strong>
-  <%= link_to t('helpers.links.create_question'), new_test_question_path(@test) %>
+  <%= link_to t('helpers.links.create_question'), new_test_question_path(@test), class: 'btn btn-light' %>
 
   <ol>
   <% render partial: 'questions/question', collection: @test.questions %>
   </ol>
 </p>
 
-<%= link_to t('helpers.links.edit'), edit_admin_test_path(@test) %> |
-<%= link_to t('helpers.links.back'), admin_tests_path %>
+<%= link_to t('helpers.links.edit'), edit_admin_test_path(@test), class: 'btn btn-warning' %> |
+<%= link_to t('helpers.links.back'), admin_tests_path, class: 'btn btn-primary' %>
